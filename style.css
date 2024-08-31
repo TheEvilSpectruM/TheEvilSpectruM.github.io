@@ -1,0 +1,172 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Éviter le défilement horizontal */
+    overflow-y: auto; /* Permettre le défilement vertical */
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed; /* Le canvas reste fixe en arrière-plan */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Le canvas est en arrière-plan */
+}
+
+#centeredText {
+    position: fixed; /* Position fixe pour le texte */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    color: black;
+    z-index: 2; /* Le texte est au-dessus du canvas */
+    text-align: center;
+    pointer-events: none; /* Éviter d'interférer avec le défilement */
+}
+
+.animationButton1 {
+    position: fixed; /* Position fixe pour le bouton */
+    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    left: 30%;
+    
+    background: #000000;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Puritan', sans-serif;
+    font-size: 20px;
+    outline: none;
+    padding: 15px;
+    margin: 6px;
+    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
+    flex-direction: column; /* Aligne l'image et le texte verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center;
+ 
+}
+
+.animationButton1:hover, .animationButton1:focus, .animationButton1:active {
+    animation: hover-wobble-vertical 1s ease-in-out 1;
+    cursor: pointer;
+  }
+  
+  @keyframes hover-wobble-vertical {
+    20% {
+      transform: translateY(8px);
+    }
+    40% {
+      transform: translateY(-6px);
+    }
+    60% {
+      transform: translateY(4px);
+    }
+    80% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.animationButton2 {
+    display: flex;
+    position: fixed; /* Position fixe pour le bouton */
+    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    left: 45%;
+    background: #000000;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Puritan', sans-serif;
+    font-size: 20px;
+    outline: none;
+    padding: 15px;
+    margin: 6px;
+    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
+    width: 600;
+    
+
+ 
+}
+.animationButton2:hover, .animationButton2:focus, .animationButton2:active {
+    animation: hover-wobble-vertical 1s ease-in-out 1;
+    cursor: pointer;
+  }
+  
+  @keyframes hover-wobble-vertical {
+    20% {
+      transform: translateY(8px);
+    }
+    40% {
+      transform: translateY(-6px);
+    }
+    60% {
+      transform: translateY(4px);
+    }
+    80% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.animationButton3 {
+
+    position: fixed; /* Position fixe pour le bouton */
+    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    left: 60%;
+    background: #000000;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Puritan', sans-serif;
+    font-size: 20px;
+    outline: none;
+    padding: 15px;
+    margin: 6px;
+    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
+    width: 600;
+    
+
+ 
+}
+.animationButton3:hover, .animationButton3:focus, .animationButton3:active {
+    animation: hover-wobble-vertical 1s ease-in-out 1;
+    cursor: pointer;
+  }
+  
+  @keyframes hover-wobble-vertical {
+    20% {
+      transform: translateY(8px);
+    }
+    40% {
+      transform: translateY(-6px);
+    }
+    60% {
+      transform: translateY(4px);
+    }
+    80% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.buttonIcon {
+    border-radius: 5px;
+    position: absolute; /* Positionne l'image de manière absolue par rapport au bouton */
+    top: -174px; /* Ajuste la position verticale de l'image */
+    left: 49.89%; /* Centre horizontalement par rapport au bouton */
+    transform: translate(-50%, 0); /* Centre horizontalement par rapport au bouton, ajuster verticalement */
+    width: 183.5px; /* Ajuste la taille de l'image */
+    height: 183px; /* Ajuste la taille de l'image */
+    object-fit: cover;
+}
