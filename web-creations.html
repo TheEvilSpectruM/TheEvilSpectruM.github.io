@@ -1,45 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Creations</title>
+    <title>Web Creations</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="ghost-emoji.png">
 </head>
-
 <body>
     <div id="centeredText"><a href="index.html">TheEvilSpectrum</a></div>
 
-    <div id="pagetitle">Roblox Creations</div>
+    <div id="pagetitle">Web Creations</div>
 
-
-
-
-    <div class="creation-container">
-        <div class="container1">
-            <img src="scary-things.png" alt="" class="image1"/>
-            <p class="title1">Scary Things</p>
-            <div class="creation-linked-button1"><a href="https://www.roblox.com/fr/games/15587007829/Scary-Things-BETA">Visit</a></div>
-        </div>
-    
-        <div class="container2">
-            <img src="fpv-drone.png" alt="" class="image2"/>
-            <p class="title2">FPV Drone</p>
-            <div class="creation-linked-button2"><a href="https://www.roblox.com/fr/games/18146921842/FPV-Drone-Testing">Visit</a></div>
-        </div>
-    </div>
-    
-
-
-
-
-
-
-
-
+    <div class="alert-p">Sorry, this page is not available yet. Please wait for the next update. For more informations, visit README on github.</div>
 
 
     <canvas id="shaderCanvas"></canvas>
@@ -114,9 +88,9 @@
         gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
             -1.0, -1.0,
-            1.0, -1.0,
-            -1.0, 1.0,
-            1.0, 1.0,
+             1.0, -1.0,
+            -1.0,  1.0,
+             1.0,  1.0,
         ]), gl.STATIC_DRAW);
 
         const positionLocation = gl.getAttribLocation(program, 'position');
@@ -141,5 +115,4 @@
         requestAnimationFrame(render);
     </script>
 </body>
-
 </html>

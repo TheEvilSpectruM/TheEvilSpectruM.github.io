@@ -7,6 +7,19 @@ body, html {
     overflow-y: auto; /* Permettre le défilement vertical */
 }
 
+.alert-p {
+
+    position: fixed; /* Position fixe pour le texte */
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    z-index: 2; /* Le texte est au-dessus du canvas */
+    text-align: center;
+}
+
 canvas {
     display: block;
     width: 100vw;
@@ -19,20 +32,43 @@ canvas {
 
 #centeredText {
     position: fixed; /* Position fixe pour le texte */
-    top: 20%;
-    left: 50%;
+    top: 5%;
+    left: 11%;
     transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
     color: black;
     z-index: 2; /* Le texte est au-dessus du canvas */
     text-align: center;
-    pointer-events: none; /* Éviter d'interférer avec le défilement */
+    
 }
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: #000000;
+}
+
+a:link {
+    color: #000000;
+}
+
+#pagetitle {
+    position: fixed;
+    top: 2%;
+    left: 43%;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color:#000000
+    
+}
+
+
 
 .animationButton1 {
     position: fixed; /* Position fixe pour le bouton */
-    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
     left: 30%;
     
     background: #000000;
@@ -51,33 +87,18 @@ canvas {
  
 }
 
+.animationButton1 {
+    transition: transform 0.3s ease;
+}
 .animationButton1:hover, .animationButton1:focus, .animationButton1:active {
-    animation: hover-wobble-vertical 1s ease-in-out 1;
     cursor: pointer;
-  }
-  
-  @keyframes hover-wobble-vertical {
-    20% {
-      transform: translateY(8px);
-    }
-    40% {
-      transform: translateY(-6px);
-    }
-    60% {
-      transform: translateY(4px);
-    }
-    80% {
-      transform: translateY(-2px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+    transform: scale(1.1);
+}
 
 .animationButton2 {
     display: flex;
     position: fixed; /* Position fixe pour le bouton */
-    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
     left: 45%;
     background: #000000;
     border: none;
@@ -90,37 +111,21 @@ canvas {
     margin: 6px;
     z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
     width: 600;
-    
+} 
 
  
+.animationButton2 {
+    transition: transform 0.3s ease;
 }
 .animationButton2:hover, .animationButton2:focus, .animationButton2:active {
-    animation: hover-wobble-vertical 1s ease-in-out 1;
     cursor: pointer;
-  }
-  
-  @keyframes hover-wobble-vertical {
-    20% {
-      transform: translateY(8px);
-    }
-    40% {
-      transform: translateY(-6px);
-    }
-    60% {
-      transform: translateY(4px);
-    }
-    80% {
-      transform: translateY(-2px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+    transform: scale(1.1);
+}
 
 .animationButton3 {
 
     position: fixed; /* Position fixe pour le bouton */
-    bottom: 220px; /* Ajustez la distance du bas selon vos besoins */
+    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
     left: 60%;
     background: #000000;
     border: none;
@@ -133,32 +138,15 @@ canvas {
     margin: 6px;
     z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
     width: 600;
-    
-
+}
  
+.animationButton3 {
+    transition: transform 0.3s ease;
 }
 .animationButton3:hover, .animationButton3:focus, .animationButton3:active {
-    animation: hover-wobble-vertical 1s ease-in-out 1;
     cursor: pointer;
-  }
-  
-  @keyframes hover-wobble-vertical {
-    20% {
-      transform: translateY(8px);
-    }
-    40% {
-      transform: translateY(-6px);
-    }
-    60% {
-      transform: translateY(4px);
-    }
-    80% {
-      transform: translateY(-2px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+    transform: scale(1.1);
+}
 
 .buttonIcon {
     border-radius: 5px;
@@ -170,3 +158,137 @@ canvas {
     height: 183px; /* Ajuste la taille de l'image */
     object-fit: cover;
 }
+
+.creation-container {
+    position: relative;
+    margin-top: 500px;
+    width: 100px;
+    height: 300px;
+    z-index: 4;
+    left: 25%;
+}
+
+/* Styles pour le premier container */
+.container1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    left: 100px;
+}
+
+.container1 img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.title1 {
+    position: absolute;
+    width: 500px;
+    left: -97px;
+    top: 100px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+}
+
+.creation-linked-button1 {
+    position: absolute;
+    width: 500px;
+    left: -97px;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.creation-linked-button1 a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+}
+
+.container1:hover .title1 {
+    top: 80px;
+}
+
+.container1:hover .creation-linked-button1 {
+    opacity: 1;
+}
+
+/* Styles pour le second container */
+.container2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    top: 0px;
+    left: 550px;
+}
+
+.container2 img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.title2 {
+    position: absolute;
+    width: 500px;
+    left: -97px;
+    top: 100px;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+}
+
+.creation-linked-button2 {
+    position: absolute;
+    width: 500px;
+    left: -97px;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.creation-linked-button2 a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+}
+
+.container2:hover .title2 {
+    top: 80px;
+}
+
+.container2:hover .creation-linked-button2 {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
