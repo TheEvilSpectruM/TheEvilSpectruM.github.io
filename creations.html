@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="ghost-emoji.png">
+
+  <style>
+    /* From Uiverse.io by gharsh11032000 */
+    .card {
+      font-family: "Courier New", Courier, monospace; /* Applique Courier New partout */
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #000000;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 1000px;
+      box-shadow: 0 0 0 5px #00000080;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      top: 190px;
+      left: 100px;
+    }
+
+    .card svg {
+      width: 48px;
+      fill: #333;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #000000;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover .card__content {
+      transform: rotateX(0deg);
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .card:hover svg {
+      scale: 0;
+    }
+
+    .card__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+    .card__button {
+      font-family: "Courier New", Courier, monospace; /* Applique Courier New partout */
+      border-radius: 10px;
+      border-color: #00000000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 90%);
+      width: 80px;
+      height: 30px;
+      font-size: large;
+      font-weight: 700;
+    }
+
+    .card2 {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #000000;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 1000px;
+      box-shadow: 0 0 0 5px #00000080;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      top: -8px;
+      left: 500px;
+    }
+
+    .card2 svg {
+      width: 48px;
+      fill: #333;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card2:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card2__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #000000;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card2:hover .card__content {
+      transform: rotateX(0deg);
+    }
+
+    .card2__title {
+      margin: 0;
+      font-size: 24px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .card2:hover svg {
+      scale: 0;
+    }
+
+    .card2__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="centeredText"><a href="index.html">TheEvilSpectrum</a></div>
+
+  <button class="btn-index" onclick="window.location.href='index.html';">About</button>
+
+  <button class="btn-creations" onclick="window.location.href='creations.html';">Creations</button>
+
+
+
+
+
+  <div class="card">
+    <img src="scary-things.png" alt="Scary Things" class="card__image" />
+    <div class="card__content">
+      <p class="card__title">Scary Things</p>
+      <p class="card__description">
+        An horror game. you need to escape. Please like the game for updates, Made only by me.
+      </p>
+      <a href="https://www.roblox.com/games/15587007829/Scary-Things-BETA" target="_blank"><button class="card__button">Go to</button></a>
+    </div>
+  </div>
+
+
+  <div class="card2">
+    <img src="image-mclennan.png" alt="McLennan Courthouse" class="card__image" />
+    <div class="card__content">
+      <p class="card__title">McLennan Courthouse</p>
+      <p class="card__description">
+        Discover my biggest build. The project is unfinished. 
+       
+      </p>
+      <a href="https://www.roblox.com/games/76489910681746/McLennan-Courthouse-EXTERIOR" target="_blank"><button class="card__button">Go to</button></a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

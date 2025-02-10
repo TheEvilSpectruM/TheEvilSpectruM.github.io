@@ -1,294 +1,137 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden; /* Éviter le défilement horizontal */
-    overflow-y: auto; /* Permettre le défilement vertical */
-}
-
-.alert-p {
-
-    position: fixed; /* Position fixe pour le texte */
-    top: 30%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: black;
-    z-index: 2; /* Le texte est au-dessus du canvas */
-    text-align: center;
-}
-
-canvas {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    position: fixed; /* Le canvas reste fixe en arrière-plan */
-    top: 0;
-    left: 0;
-    z-index: 1; /* Le canvas est en arrière-plan */
+html, body {
+  height: 100%; /* Assure que la page occupe toute la hauteur */
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  position: relative; /* Nécessaire pour que le positionnement absolu fonctionne correctement */
+  cursor: cell;
+  font-family: "Courier New", Courier, monospace; /* Applique Courier New partout */
+  font-weight: 300; /* Rend le texte plus fin */
+  user-select: none;
 }
 
 #centeredText {
-    position: fixed; /* Position fixe pour le texte */
-    top: 5%;
-    left: 11%;
-    transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    color: black;
-    z-index: 2; /* Le texte est au-dessus du canvas */
-    text-align: center;
-    
+  position: fixed; /* Position fixe pour le texte */
+  top: 5%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 48px;
+  font-weight: 300; /* Texte fin */
+  color: white;
+  z-index: 2; /* Le texte est au-dessus du canvas */
+  text-align: center;
 }
+
 a {
-    outline: none;
-    text-decoration: none;
-    padding: 2px 1px 0;
-    color: #000000;
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 300; /* Texte fin */
 }
 
-a:link {
-    color: #000000;
+#creationsText {
+  font-family: "Courier New", Courier, monospace;
+  position: fixed; /* Position fixe pour le texte */
+  top: 300%;
+  left: 850%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: 300; /* Texte fin */
+  color: white;
+  z-index: 2; /* Le texte est au-dessus du canvas */
+  text-align: center;
 }
 
-#pagetitle {
-    position: fixed;
-    top: 2%;
-    left: 43%;
-    z-index: 2;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color:#000000
-    
+/* Style du bouton texte */
+.btn-creations {
+  position: absolute;
+  top: 15px; /* Le bouton est maintenant à 30px du haut */
+  right: 400px; /* Le bouton est maintenant à 400px du côté droit */
+  
+  font-family: "Courier New", Courier, monospace;
+  background-color: transparent; /* Pas de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Pas de contour */
+  font-size: 26px;
+  font-weight: 300; /* Texte fin */
+  cursor: pointer;
+  padding: 10px 20px; /* Donne un peu d'espace autour du texte */
+  
+  /* Transitions pour agrandir le texte en douceur */
+  transition: transform 0.3s ease, font-size 0.3s ease; 
+
+  /* C'est l'élément qui assure que la transformation est bien centrée */
+  transform-origin: center center; /* Centre le bouton pour le redimensionnement */
 }
 
-
-
-.animationButton1 {
-    position: fixed; /* Position fixe pour le bouton */
-    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
-    left: 30%;
-    
-    background: #000000;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-family: 'Puritan', sans-serif;
-    font-size: 20px;
-    outline: none;
-    padding: 15px;
-    margin: 6px;
-    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
-    flex-direction: column; /* Aligne l'image et le texte verticalement */
-    align-items: center; /* Centre horizontalement */
-    text-align: center;
- 
+.btn-creations:hover {
+  cursor: cell;
+  transform: scale(1.1); /* Agrandissement de 10% */
+  font-size: 27px; /* Légère augmentation de la taille du texte */
 }
 
-.animationButton1 {
-    transition: transform 0.3s ease;
-}
-.animationButton1:hover, .animationButton1:focus, .animationButton1:active {
-    cursor: pointer;
-    transform: scale(1.1);
+/* Style du bouton texte */
+.btn-index {
+  position: absolute;
+  top: 15px; /* Le bouton est maintenant à 30px du haut */
+  right: 575px; /* Le bouton est maintenant à 400px du côté droit */
+  
+  font-family: "Courier New", Courier, monospace;
+  background-color: transparent; /* Pas de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Pas de contour */
+  font-size: 26px;
+  font-weight: 300; /* Texte fin */
+  cursor: pointer;
+  padding: 10px 20px; /* Donne un peu d'espace autour du texte */
+  
+  /* Transitions pour agrandir le texte en douceur */
+  transition: transform 0.3s ease, font-size 0.3s ease; 
+
+  /* C'est l'élément qui assure que la transformation est bien centrée */
+  transform-origin: center center; /* Centre le bouton pour le redimensionnement */
 }
 
-.animationButton2 {
-    display: flex;
-    position: fixed; /* Position fixe pour le bouton */
-    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
-    left: 45%;
-    background: #000000;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-family: 'Puritan', sans-serif;
-    font-size: 20px;
-    outline: none;
-    padding: 15px;
-    margin: 6px;
-    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
-    width: 600;
-} 
-
- 
-.animationButton2 {
-    transition: transform 0.3s ease;
-}
-.animationButton2:hover, .animationButton2:focus, .animationButton2:active {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.animationButton3 {
-
-    position: fixed; /* Position fixe pour le bouton */
-    bottom: 30px; /* Ajustez la distance du bas selon vos besoins */
-    left: 60%;
-    background: #000000;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-family: 'Puritan', sans-serif;
-    font-size: 20px;
-    outline: none;
-    padding: 15px;
-    margin: 6px;
-    z-index: 3; /* Le bouton est au-dessus du canvas et du texte */
-    width: 600;
-}
- 
-.animationButton3 {
-    transition: transform 0.3s ease;
-}
-.animationButton3:hover, .animationButton3:focus, .animationButton3:active {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.buttonIcon {
-    border-radius: 5px;
-    position: absolute; /* Positionne l'image de manière absolue par rapport au bouton */
-    top: -174px; /* Ajuste la position verticale de l'image */
-    left: 49.89%; /* Centre horizontalement par rapport au bouton */
-    transform: translate(-50%, 0); /* Centre horizontalement par rapport au bouton, ajuster verticalement */
-    width: 183.5px; /* Ajuste la taille de l'image */
-    height: 183px; /* Ajuste la taille de l'image */
-    object-fit: cover;
-}
-
-.creation-container {
-    position: relative;
-    margin-top: 500px;
-    width: 100px;
-    height: 300px;
-    z-index: 4;
-    left: 25%;
-}
-
-/* Styles pour le premier container */
-.container1 {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin-bottom: 50px;
-    left: 100px;
-}
-
-.container1 img {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 0;
-    border-radius: 5px;
-}
-
-.title1 {
-    position: absolute;
-    width: 500px;
-    left: -97px;
-    top: 100px;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    z-index: 1;
-    transition: top .5s ease;
-}
-
-.creation-linked-button1 {
-    position: absolute;
-    width: 500px;
-    left: -97px;
-    top: 180px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
-}
-
-.creation-linked-button1 a {
-    width: 200px;
-    padding: 12px 48px;
-    text-align: center;
-    color: white;
-    border: solid 2px white;
-    z-index: 1;
-}
-
-.container1:hover .title1 {
-    top: 80px;
-}
-
-.container1:hover .creation-linked-button1 {
-    opacity: 1;
-}
-
-/* Styles pour le second container */
-.container2 {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    margin-bottom: 50px;
-    top: 0px;
-    left: 550px;
-}
-
-.container2 img {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 0;
-    border-radius: 5px;
-}
-
-.title2 {
-    position: absolute;
-    width: 500px;
-    left: -97px;
-    top: 100px;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    z-index: 1;
-    transition: top .5s ease;
-}
-
-.creation-linked-button2 {
-    position: absolute;
-    width: 500px;
-    left: -97px;
-    top: 180px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
-}
-
-.creation-linked-button2 a {
-    width: 200px;
-    padding: 12px 48px;
-    text-align: center;
-    color: white;
-    border: solid 2px white;
-    z-index: 1;
-}
-
-.container2:hover .title2 {
-    top: 80px;
-}
-
-.container2:hover .creation-linked-button2 {
-    opacity: 1;
+.btn-index:hover {
+  cursor: cell;
+  transform: scale(1.1); /* Agrandissement de 10% */
+  font-size: 27px; /* Légère augmentation de la taille du texte */
 }
 
 
+.paragraph-1 {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  font-size: 25px;
+  text-align: center;
 
+}
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  position: absolute;
+  transform: translate(-50%, -40%);
+  left: 50%;
+  top: 40%
+  
+}
 
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  transition: transform 0.3s ease-in-out;
+}
 
-
-
+.icon:hover {
+  transform: scale(1.2);
+}
